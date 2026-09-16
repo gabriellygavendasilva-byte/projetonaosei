@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> TechStore- loja virtual </title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        /* MENU */
+
+        nav {
+            background-color: #111;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff512f;
+        }
+
+        /* SEÇÕES */
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #dd2476;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        /* INÍCIO */
+
+        .inicio {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .inicio img {
+            width: 45%;
+            border-radius: 15px;
+        }
+
+        .inicio-texto {
+            width: 55%;
+        }
+
+        .inicio-texto h2 {
+            text-align: left;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #dd2476;
+            margin-bottom: 10px;
+        }
+
+        /* ATIVIDADES */
+
+        .atividade {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 6px solid #ff512f;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .atividade h3 {
+            color: #dd2476;
+            margin-bottom: 10px;
+        }
+
+        /* ÁREA DO PROJETO */
+
+        .projeto {
+            background: linear-gradient(135deg, #222, #444);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .projeto h2 {
+            color: white;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #ff512f;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background-color: #dd2476;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            .inicio {
+                flex-direction: column;
+            }
+
+            .inicio img,
+            .inicio-texto {
+                width: 100%;
+            }
+
+            .inicio-texto h2 {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <h1>💻 TechStore-loja virtual</h1>
+
+        <p>2º Ano do Ensino Médio</p>
+
+        <p>
+            Tecnologia, inovação e produtos que fazem a diferença.
+        </p>
+
+    </header>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+        <a href="#inicio">Início</a>
+
+        <a href="#Mais vendidos">mais vendidos</a>
+
+        <a href="#Ofertas">ofertas</a>
+
+        <a href="#Contato">contato</a>
+
+    </nav>
+
+
+    <!-- INÍCIO -->
+
+    <section id="inicio">
+
+        <div class="inicio">
+
+            <img
+                src="images.jpeg"
+                alt="Programador trabalhando em um computador"
+            >
+
+            <div class="inicio-texto">
+
+                <h2>🚀 Bem-Vindo a loja TechStore!</h2>
+
+                <p>
+                    Este espaço foi criado para apresentar nossa
+                    <strong>Tech Store</strong>, com produtos, novidades e soluções em tecnologia.
+                    
+                </p>
+
+                <br>
+
+                <p>
+                    Durante nossa jornada, você poderá conhecer nossos produtos, conferir as novidades e encontrar as melhores opções em tecnologia para o seu dia a dia.
+                </p>
+
+                <br>
+
+                <p>
+                
+                </p>📱 Tecnologia + 💻 Qualidade + 🛍️ Melhores preços
+            </p>
+
+                <br>
+
+                <p>
+                    Para a loja, pode ficar assim:
+
+                    O objetivo é oferecer produtos de tecnologia de qualidade,
+                    com ótimos preços e uma experiência de compra simples e segura.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUTOS -->
+
+    <section id="PRODUTOS">
+
+        <h2>🛠️ PRODUTOS</h2>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <img
+                    src="iphone-17-colors.png"
+                    alt=📱 Celular/Smartphone
+
+                >
+
+                <h3>📱 Celular/Smartphone
+                </h3>
+
+                <p>Smartphone moderno com design elegante e alta tecnologia"
+
+
+
+            </div>
+
+
+                
+
+
+            <div class="card">
+
+                <img
+                    src="images (1).jpeg"
+                    alt="notebook"
+                >
+
+                <h3>💻notebook </h3>
+
+                <p>
+                    Potência, elegância e tecnologia em um só lugar: o notebook Apple perfeito para acompanhar você em todos os momentos!
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="hero__crzh9misvcuq_large.jpg"
+                    alt="tablets"
+                >
+
+                <h3>📱 tablet</h3>
+
+                <p>
+                    Praticidade, tecnologia e desempenho na palma da sua mão! O tablet é perfeito para estudar, trabalhar, assistir aos seus conteúdos favoritos e muito mais.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTEÚDOS -->
+
+    <section id="conteudos">
+
+        <h2></h2>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>01</h3>
+
+                <h3>Clientes satisfeitos com nossos produtos
+                </h3>
+
+                <p>
+                
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>02</h3>
+
+                <h3>Ana Julia </h3>
+
+                <p>
+                    Eu adorei comprar nessa loja! Os produtos são de ótima qualidade e dá para perceber o cuidado em cada detalhe.”
+
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>03</h3>
+
+                <h3>Carlos Daniel</h3>
+
+                <p>
+                    Sempre procuro produtos bons e aqui encontrei exatamente o que queria. Qualidade excelente e atendimento muito bom!”   
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>04</h3>
+
+                <h3>Mariana</h3>
+
+                <p>
+                    Comprei e fiquei muito satisfeita! O produto superou minhas
+                    expectativas. Recomendo muito essa loja!
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>05</h3>
+
+                <h3>Joao Miguel</h3>
+
+                <p>
+                    Os produtos da loja são muito bem avaliados pelos clientes, que destacam a loja
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>06</h3>
+
+                <h3>Jonas</h3>
+
+                <p>
+                    Os produtos de qualidade, vale muito apena compra dessa loja.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ATIVIDADES -->
+
+    <section id="atividades">
+
+        <h2> TechStore</h2>
+
+
+        <div class="atividade">
+
+            <h3>Conhecendo a loja</h3>
+
+            <p>
+                A TechStore é uma loja especializada em produtos de tecnologia e eletrônicos. 
+                Ela oferece diversos produtos para facilitar o dia a dia dos clientes, como 
+                computadores, notebooks, celulares, fones de ouvido, teclados, mouses e outros acessórios.
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>Contato da loja</h3>
+
+            <p>
+                Tem alguma dúvida ou precisa de ajuda para escolher um produto? Entre em contato com a TechStore!
+    
+
+ Tem alguma dúvida ou precisa de ajuda para escolher um produto? Entre em contato com a **TechStore**!
+
+ 📱Telefone: (41) 99999-9999\
+ 📧 E-mail:contato@techstore.com\
+ 📍 Endereço:Rua da Tecnologia, 100 – Curitiba, PR
+
+ Nosso atendimento está disponível de segunda a sexta-feira, das 9h às 18h. Será um prazer ajudar você a encontrar o produto ideal!
+
+        
+            </p>
+
+        </div>
+
+
+        <div class="atividade">
+
+            <h3>📱 Produtos da loja</h3>
+
+            <p>
+                💻 Notebooks
+                🖥️ Computadores
+                📱 Celulares 
+                🎧 Fones de ouvido
+                🎮 Controles e acessórios gamer
+                🔌 Cabos e carregadores
+            </p>
+
+        </div>
+
+
+       
+
+    </section>
+
+
+    <!-- PROJETO FINAL -->
+
+    <section id="projeto">
+
+        <div class="projeto">
+
+            <h2>🚀 Projeto Final- TECHSTORE</h2>
+
+            <p>
+                Neste projeto, será desenvolvido um site para a TechStore, uma loja especializada em produtos de tecnologia.
+
+
+            </p>
+
+            <br>
+
+            <p>
+            
+            </p>
+
+            <br>
+
+            <p>
+                O site apresentará diferentes produtos, como notebooks, celulares, fones de ouvido, computadores, teclados e mouses. Também terá informações sobre a loja, ofertas especiais e formas de contato.
+            </p>
+
+            <a href="#inicio" class="botao">
+                Voltar ao início
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            💻 TechStore – 2º Ano do Ensino Médio
+        </p>
+
+        <p>
+            Na TechStore, você encontra diversos produtos de tecnologia para estudo, trabalho, lazer e entretenimento.
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 - Projeto de uma loja
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
